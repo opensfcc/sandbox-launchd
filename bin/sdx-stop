@@ -1,0 +1,40 @@
+#!/bin/zsh
+
+# Load NVM if Installed
+if [ -d $HOME/.nvm ]; then
+    . $HOME/.nvm/nvm.sh
+    . $HOME/.zshrc
+    nvm use default
+fi
+
+# Set Variables
+LOGFILE=$HOME/.sfccdevops/sandbox.log
+
+# Alias sandbox to sfcc-ci for custom handling
+sandbox() {
+    # Check if SFCC_SANDBOX_ID is set
+    if [ -z "$SFCC_SANDBOX_ID" ]; then
+        echo -e "\n❌ MISSING SFCC_SANDBOX_ID\n\n\033[0;2mPlease make sure you've added your environmental variables:\n\n› \033[0;36mhttps://github.com/sfccdevops/sandbox-launchd\n"
+        exit 1
+
+    # Check if sfcc-ci is installed
+    elif hash sfcc-ci 2>/dev/null; then
+        sfcc-ci "$@"
+
+    # Exit if sfcc-ci is not installed
+    else
+        echo -e "\n❌ MISSING SFCC-CI\n\n\033[0;2mPlease install & configure sfcc-ci:\n\n› \033[0;36mhttps://github.com/sfccdevops/sandbox-launchd\n"
+        exit 1
+    fi
+}
+
+# Log Timestamp
+echo -e "\n[$(date +%F\ %T)] STOP" >> $LOGFILE
+
+# Authenticate to Sandbox
+sandbox client:auth >> $LOGFILE
+
+# Stop Sandbox ( no need to wait, just send the shutdown command )
+sandbox sandbox:stop --sandbox $SFCC_SANDBOX_ID >> $LOGFILE
+
+# No need to send notification, developer is long gone

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Debug</key>
+    	<true/>
+		<key>Label</key>
+		<string>com.sfccdevops.sandbox</string>
+		<key>ProgramArguments</key>
+		<array>
+			<string>~/.sfccdevops/boot-shutdown</string>
+		</array>
+		<key>RunAtLoad</key>
+		<true/>
+		<key>KeepAlive</key>
+    	<false/>
+		<key>LaunchOnlyOnce</key>        
+    	<true/>
+		<key>StandardOutPath</key>
+		<string>~/.sfccdevops/sandbox.log</string>
+		<key>StandardErrorPath</key>
+		<string>~/.sfccdevops/sandbox.log</string>
+		<key>ExitTimeOut</key>
+		<integer>600</integer>
+	</dict>
+</plist>

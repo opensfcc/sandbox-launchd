@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+function shutdown()
+{
+  # Send Shutdown Signal to Sandbox in Background
+  ~/.sfccdevops/sdx-stop
+  exit 0
+}
+
+function startup()
+{
+  # Send Startup Signal to Sandbox in Background
+  ~/.sfccdevops/sdx-start
+
+  tail -f /dev/null &
+  wait $!
+}
+
+trap shutdown SIGTERM
+trap shutdown SIGKILL
+
+startup;

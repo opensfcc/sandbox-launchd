@@ -1,0 +1,51 @@
+#!/bin/zsh
+
+# Load NVM if Installed
+if [ -d $HOME/.nvm ]; then
+    . $HOME/.nvm/nvm.sh
+    . $HOME/.zshrc
+    nvm use default
+fi
+
+# Set Variables
+LOGFILE=$HOME/.sfccdevops/sandbox.log
+MAX_LINES=100
+
+# Alias sandbox to sfcc-ci for custom handling
+sandbox() {
+    # Check if SFCC_SANDBOX_ID is set
+    if [ -z "$SFCC_SANDBOX_ID" ]; then
+        echo -e "\n❌ MISSING SFCC_SANDBOX_ID\n\n\033[0;2mPlease make sure you've added your environmental variables:\n\n› \033[0;36mhttps://github.com/sfccdevops/sandbox-launchd\n"
+        exit 1
+
+    # Check if sfcc-ci is installed
+    elif hash sfcc-ci 2>/dev/null; then
+        sfcc-ci "$@"
+
+    # Exit if sfcc-ci is not installed
+    else
+        echo -e "\n❌ MISSING SFCC-CI\n\n\033[0;2mPlease install & configure sfcc-ci:\n\n› \033[0;36mhttps://github.com/sfccdevops/sandbox-launchd\n"
+        exit 1
+    fi
+}
+
+# Do a quick check on log size
+LINES=$(cat $LOGFILE | wc -l | xargs)
+OVERFLOW=$(( $LINES - $MAX_LINES ))
+
+# If log is too big, remove MAX_LINES from the top
+if (( $LINES > $MAX_LINES )); then
+    sed -i '' "1,${OVERFLOW}d" $LOGFILE
+fi
+
+# Log Timestamp
+echo -e "\n[$(date +%F\ %T)] START" >> $LOGFILE
+
+# Authenticate to Sandbox
+sandbox client:auth >> $LOGFILE
+
+# Start Sandbox and wait for it to have `started` status
+sandbox sandbox:start --sandbox $SFCC_SANDBOX_ID --sync >> $LOGFILE
+
+# Send Notification to Developer that Sandbox is ready
+osascript -e 'display notification "Your sandbox is running and ready to use." with title "Sandbox Started" sound name "Morse"'

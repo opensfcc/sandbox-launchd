@@ -1,0 +1,48 @@
+#!/bin/bash
+
+echo -e '\n\033[0;32mSANDBOX LAUNCHD\033[0m\n'
+
+# Install Sleepwatcher using Homebrew if not installed
+INSTALLED=$(brew list | grep sleepwatcher)
+if [ -z "$INSTALLED" ]; then
+    echo '✔ Installing Sleepwatcher using Homebrew'
+    brew install sleepwatcher
+fi
+
+# Create Launch Daemon
+echo '✔ Creating Launch Agents'
+mkdir -p $HOME/Library/LaunchAgents
+cp launchd/*.plist $HOME/Library/LaunchAgents/
+
+# Copy Wake & Sleep files to home directory acording to instructions
+echo '✔ Copying Program Files'
+mkdir -p $HOME/.sfccdevops
+cp bin/boot-shutdown $HOME/.sfccdevops/boot-shutdown
+cp bin/sdx-stop $HOME/.sfccdevops/sdx-stop
+cp bin/sdx-start $HOME/.sfccdevops/sdx-start
+
+# Replace Relative Path with Absolute Path
+sed -i '' "s|~|$HOME|" $HOME/Library/LaunchAgents/com.sfccdevops.*.plist
+sed -i '' "s|~|$HOME|" $HOME/.sfccdevops/boot-shutdown
+
+# Unload Launch Daemon if Loaded
+LOADED=$(launchctl list | grep com.sfccdevops)
+if [ -n "$LOADED" ]; then
+    launchctl unload -w $HOME/Library/LaunchAgents/com.sfccdevops.sleepwatcher.plist
+    launchctl unload -w $HOME/Library/LaunchAgents/com.sfccdevops.sandbox.plist
+fi
+
+# Load Launch Daemon
+echo '✔ Loading Launch Agents'
+launchctl load -w $HOME/Library/LaunchAgents/com.sfccdevops.sleepwatcher.plist
+launchctl load -w $HOME/Library/LaunchAgents/com.sfccdevops.sandbox.plist
+
+# Set Permissions on Program Files
+chmod u+x $HOME/.sfccdevops/boot-shutdown
+chmod u+x $HOME/.sfccdevops/sdx-*
+
+# Reset Log File
+cat /dev/null > $HOME/.sfccdevops/sandbox.log
+
+# All Done :)
+echo -e '\n✅ Installation Complete!\n'
