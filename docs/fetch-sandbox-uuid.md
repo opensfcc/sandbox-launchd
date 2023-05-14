@@ -7,19 +7,19 @@ Fetch Sandbox UUID
 
 > Now that we've verified everything is working with SFCC-CI, we can get our Sandbox UUID.
 
+Let's get a list of sandboxes our API Client ID has permission to access:
+
 ```bash
-# Verify we can see a list of sandboxes
 sfcc-ci sandbox:list
 ```
 
-Using the table that was generated in the command above, look for your sandbox number in the `instance` column.  For example, if your sandbox starts with `abcd-001` your `instance` will be `001`.
+Using the table generated in the command above, look for your sandbox number in the `instance` column.  For example, if your sandbox starts with `abcd-001` your `instance` will be `001`.
 
 Copy the `id` from the `id` column for your sandbox.
 
 Now we can paste our Sandbox UUID as the value for `SFCC_SANDBOX_ID` in our `~./zshrc` file.
 
 ```bash
-# UUID of Sandbox
 export SFCC_SANDBOX_ID="9p8o7n6m-5l4k-3j2i-1h0g-9f8e7d6c5b4a"
 ```
 

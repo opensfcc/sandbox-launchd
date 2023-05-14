@@ -3,7 +3,7 @@
 <plist version="1.0">
 	<dict>
 		<key>Debug</key>
-    	<true/>
+		<true/>
 		<key>Label</key>
 		<string>com.sfccdevops.sandbox</string>
 		<key>ProgramArguments</key>
@@ -13,9 +13,9 @@
 		<key>RunAtLoad</key>
 		<true/>
 		<key>KeepAlive</key>
-    	<false/>
-		<key>LaunchOnlyOnce</key>        
-    	<true/>
+		<false/>
+		<key>LaunchOnlyOnce</key>
+		<true/>
 		<key>StandardOutPath</key>
 		<string>~/.sfccdevops/sandbox.log</string>
 		<key>StandardErrorPath</key>

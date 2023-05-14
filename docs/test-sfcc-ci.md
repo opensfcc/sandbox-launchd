@@ -5,22 +5,15 @@
 Test SFCC-CI
 ===
 
-> We should be ready to test out that we have SFCC-CI installed correctly.
+> We should be ready to test that we have SFCC-CI installed correctly.
 
-Let's up a new terminal window and run the following commands:
+Let's check that our API Client Authentication information was entered correctly:
 
 ```bash
-# Login with API Client Data we just entered
 sfcc-ci client:auth
 ```
 
-This command should output:
-
-```text
-Authentication succeeded
-```
-
-If it didn't, head back through the first few steps and make sure you setup everything correctly.
+If you did not get a response of `Authentication succeeded`, head back through the first few steps and ensure you set up everything correctly.
 
 ---
 

@@ -5,16 +5,18 @@
 Adding Environment Variables
 ===
 
-> We'll need the following Environmental Variables to be set before things will work.  
+> We'll need the following Environmental Variables to be set before things will work.
 
-Add these under the existing `export` in your `~/.zshrc`
+Add the following under the existing exports listed in your `~/.zshrc`
 
 ```bash
-# SFCC CI Variables
+# SFCC-CI Variables
 export SFCC_OAUTH_CLIENT_ID="1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p"
 export SFCC_OAUTH_CLIENT_SECRET="my^super*secret+password"
 export SFCC_SANDBOX_ID=""
 ```
+
+### What do these do?
 
 * `SFCC_OAUTH_CLIENT_ID` - This is your "API Client" that was generated earlier
 * `SFCC_OAUTH_CLIENT_SECRET` - This is the password you entered earlier

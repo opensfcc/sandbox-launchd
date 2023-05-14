@@ -25,7 +25,9 @@ Getting Setup
 
 > Download the source code and follow these instructions to get setup:
 
-[![Download](https://img.shields.io/badge/Download-blue.svg?logo=github&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/releases/latest)
+[![Download](https://img.shields.io/badge/Download-121212.svg?logo=github&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/releases/latest)
+
+### Installation Steps
 
 1. [Install SFCC-CI](docs/install-sfcc-ci.md)
 2. [Create API Client](docs/create-api-client.md)
@@ -34,16 +36,18 @@ Getting Setup
 5. [Fetch Sandbox UUID](docs/fetch-sandbox-uuid.md)
 6. [Install Launch Agents](docs/install-launch-agents.md)
 
+[![Get Started](https://img.shields.io/badge/First_Step-1aa0db.svg?logo=github&style=for-the-badge)](docs/install-sfcc-ci.md)
+
 ### Extra Goodies
 
-If you happen to use [Alfred](https://www.alfredapp.com) on your computer, we are also releasing a [Custom Workflow](./Sandbox.alfredworkflow) that allows you to Start & Stop your Sandbox, as well as use your mobile device to trigger your workflow remotely.
+If you happen to use [Alfred](https://www.alfredapp.com) on your computer, we are also releasing a [Custom Workflow](https://github.com/sfccdevops/sandbox-launchd/raw/main/Sandbox.alfredworkflow) that allows you to Start & Stop your Sandbox, and use your mobile device to trigger your workflow remotely.
 
 [![Alfred Workflow](https://img.shields.io/badge/Alfred_Workflow-5C1F87.svg?logo=alfred&logoColor=white&style=for-the-badge)](docs/alfred-workflow.md)
 
 Contributing
 ---
 
-> Interested in making this tool better?  Fork this Repository and we'll gladly accept Pull Requests.
+> Are you interested in making this tool better?  Fork this Repository, and we'll gladly accept Pull Requests.
 
 [![Contribution Guide](https://img.shields.io/badge/Contribution_Guide-EEEEEE.svg?logo=github&logoColor=black&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/blob/develop/.github/CONTRIBUTING.md)
 

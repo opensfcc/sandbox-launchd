@@ -10,7 +10,7 @@ Alfred Workflow
 Installation
 ---
 
-[![Download Workflow](https://img.shields.io/badge/Download_Workflow-5C1F87.svg?logo=alfred&logoColor=white&style=for-the-badge)](../Sandbox.alfredworkflow)
+[![Download Workflow](https://img.shields.io/badge/Download_Workflow-5C1F87.svg?logo=alfred&logoColor=white&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/raw/main/Sandbox.alfredworkflow)
 
 ### Usage
 
@@ -22,7 +22,7 @@ Installation
 
 1. Open Alfred
 2. Click Remote Icon in Left Column
-3. Click the `[+]` button at bottom of list to add a New Remote
+3. Click the `[+]` button at the bottom of the list to add a New Remote
 4. Select: `Workflows` > `Sandbox` > `Sandbox`
 5. You can now manage your sandbox from your phone ;)
 
@@ -30,4 +30,4 @@ Installation
 
 ---
 
-[![README](https://img.shields.io/badge/README-121212.svg?logo=github&style=for-the-badge)](../README)
+[![README](https://img.shields.io/badge/README-121212.svg?logo=github&style=for-the-badge)](../README.md)

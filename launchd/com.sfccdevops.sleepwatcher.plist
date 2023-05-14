@@ -3,7 +3,7 @@
 <plist version="1.0">
 	<dict>
 		<key>Debug</key>
-    	<true/>
+		<true/>
 		<key>Label</key>
 		<string>com.sfccdevops.sleepwatcher</string>
 		<key>ProgramArguments</key>
