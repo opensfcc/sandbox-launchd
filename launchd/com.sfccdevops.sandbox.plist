@@ -5,10 +5,10 @@
 		<key>Debug</key>
 		<true/>
 		<key>Label</key>
-		<string>com.sfccdevops.sandbox</string>
+		<string>com.opensfcc.sandbox</string>
 		<key>ProgramArguments</key>
 		<array>
-			<string>~/.sfccdevops/boot-shutdown</string>
+			<string>~/.opensfcc/boot-shutdown</string>
 		</array>
 		<key>RunAtLoad</key>
 		<true/>
@@ -17,9 +17,9 @@
 		<key>LaunchOnlyOnce</key>
 		<true/>
 		<key>StandardOutPath</key>
-		<string>~/.sfccdevops/sandbox.log</string>
+		<string>~/.opensfcc/sandbox.log</string>
 		<key>StandardErrorPath</key>
-		<string>~/.sfccdevops/sandbox.log</string>
+		<string>~/.opensfcc/sandbox.log</string>
 		<key>ExitTimeOut</key>
 		<integer>600</integer>
 	</dict>
