@@ -1,4 +1,4 @@
-![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
+![Logo](https://avatars.githubusercontent.com/u/151680118?s=200&v=4 "Logo")
 
 **[↤ Getting Started](../README.md)**
 
@@ -10,7 +10,7 @@ Alfred Workflow
 Installation
 ---
 
-[![Download Workflow](https://img.shields.io/badge/Download_Workflow-5C1F87.svg?logo=alfred&logoColor=white&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/raw/main/Sandbox.alfredworkflow)
+[![Download Workflow](https://img.shields.io/badge/Download_Workflow-5C1F87.svg?logo=alfred&logoColor=white&style=for-the-badge)](https://github.com/opensfcc/sandbox-launchd/raw/main/Sandbox.alfredworkflow)
 
 ### Usage
 
