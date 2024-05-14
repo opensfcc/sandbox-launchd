@@ -16,33 +16,33 @@ cp launchd/*.plist $HOME/Library/LaunchAgents/
 
 # Copy Wake & Sleep files to home directory acording to instructions
 echo '✔ Copying Program Files'
-mkdir -p $HOME/.sfccdevops
-cp bin/boot-shutdown $HOME/.sfccdevops/boot-shutdown
-cp bin/sdx-stop $HOME/.sfccdevops/sdx-stop
-cp bin/sdx-start $HOME/.sfccdevops/sdx-start
+mkdir -p $HOME/.opensfcc
+cp bin/boot-shutdown $HOME/.opensfcc/boot-shutdown
+cp bin/sdx-stop $HOME/.opensfcc/sdx-stop
+cp bin/sdx-start $HOME/.opensfcc/sdx-start
 
 # Replace Relative Path with Absolute Path
-sed -i '' "s|~|$HOME|" $HOME/Library/LaunchAgents/com.sfccdevops.*.plist
-sed -i '' "s|~|$HOME|" $HOME/.sfccdevops/boot-shutdown
+sed -i '' "s|~|$HOME|" $HOME/Library/LaunchAgents/com.opensfcc.*.plist
+sed -i '' "s|~|$HOME|" $HOME/.opensfcc/boot-shutdown
 
 # Unload Launch Daemon if Loaded
-LOADED=$(launchctl list | grep com.sfccdevops)
+LOADED=$(launchctl list | grep com.opensfcc)
 if [ -n "$LOADED" ]; then
-    launchctl unload -w $HOME/Library/LaunchAgents/com.sfccdevops.sleepwatcher.plist
-    launchctl unload -w $HOME/Library/LaunchAgents/com.sfccdevops.sandbox.plist
+    launchctl unload -w $HOME/Library/LaunchAgents/com.opensfcc.sleepwatcher.plist
+    launchctl unload -w $HOME/Library/LaunchAgents/com.opensfcc.sandbox.plist
 fi
 
 # Load Launch Daemon
 echo '✔ Loading Launch Agents'
-launchctl load -w $HOME/Library/LaunchAgents/com.sfccdevops.sleepwatcher.plist
-launchctl load -w $HOME/Library/LaunchAgents/com.sfccdevops.sandbox.plist
+launchctl load -w $HOME/Library/LaunchAgents/com.opensfcc.sleepwatcher.plist
+launchctl load -w $HOME/Library/LaunchAgents/com.opensfcc.sandbox.plist
 
 # Set Permissions on Program Files
-chmod u+x $HOME/.sfccdevops/boot-shutdown
-chmod u+x $HOME/.sfccdevops/sdx-*
+chmod u+x $HOME/.opensfcc/boot-shutdown
+chmod u+x $HOME/.opensfcc/sdx-*
 
 # Reset Log File
-cat /dev/null > $HOME/.sfccdevops/sandbox.log
+cat /dev/null > $HOME/.opensfcc/sandbox.log
 
 # All Done :)
 echo -e '\n✅ Installation Complete!\n'
