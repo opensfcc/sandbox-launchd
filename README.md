@@ -1,13 +1,4 @@
-Project Support
-===
-
-If you or your company enjoy using this project, please consider supporting my work and joining my discord. 💖
-
-[![Become a GitHub Sponsor](https://img.shields.io/badge/Sponsor-171515.svg?logo=github&logoColor=white&style=for-the-badge "Become a GitHub Sponsor")](https://github.com/sponsors/sfccdevops) [![Become a Patreon Sponsor](https://img.shields.io/badge/Sponsor-FF424D.svg?logo=patreon&logoColor=white&style=for-the-badge "Become a Patreon Sponsor")](https://patreon.com/peter_schmalfeldt) [![Donate via PayPal](https://img.shields.io/badge/Donate-169BD7.svg?logo=paypal&logoColor=white&style=for-the-badge "Donate via PayPal")](https://www.paypal.me/manifestinteractive) [![Join Discord Community](https://img.shields.io/badge/Community-5865F2.svg?logo=discord&logoColor=white&style=for-the-badge "Join Discord Community")](https://discord.gg/JVKYHCKvrs)
-
-------
-
-![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
+![Logo](https://avatars.githubusercontent.com/u/151680118?s=200&v=4 "Logo")
 
 Sandbox Launchd
 ===
@@ -25,7 +16,7 @@ Getting Setup
 
 > Download the source code and follow these instructions to get setup:
 
-[![Download](https://img.shields.io/badge/Download-121212.svg?logo=github&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/releases/latest)
+[![Download](https://img.shields.io/badge/Download-121212.svg?logo=github&style=for-the-badge)](https://github.com/opensfcc/sandbox-launchd/releases/latest)
 
 ### Installation Steps
 
@@ -40,7 +31,7 @@ Getting Setup
 
 ### Extra Goodies
 
-If you happen to use [Alfred](https://www.alfredapp.com) on your computer, we are also releasing a [Custom Workflow](https://github.com/sfccdevops/sandbox-launchd/raw/main/Sandbox.alfredworkflow) that allows you to Start & Stop your Sandbox, and use your mobile device to trigger your workflow remotely.
+If you happen to use [Alfred](https://www.alfredapp.com) on your computer, we are also releasing a [Custom Workflow](https://github.com/opensfcc/sandbox-launchd/raw/main/Sandbox.alfredworkflow) that allows you to Start & Stop your Sandbox, and use your mobile device to trigger your workflow remotely.
 
 [![Alfred Workflow](https://img.shields.io/badge/Alfred_Workflow-5C1F87.svg?logo=alfred&logoColor=white&style=for-the-badge)](docs/alfred-workflow.md)
 
@@ -49,7 +40,7 @@ Contributing
 
 > Are you interested in making this tool better?  Fork this Repository, and we'll gladly accept Pull Requests.
 
-[![Contribution Guide](https://img.shields.io/badge/Contribution_Guide-EEEEEE.svg?logo=github&logoColor=black&style=for-the-badge)](https://github.com/sfccdevops/sandbox-launchd/blob/develop/.github/CONTRIBUTING.md)
+[![Contribution Guide](https://img.shields.io/badge/Contribution_Guide-EEEEEE.svg?logo=github&logoColor=black&style=for-the-badge)](https://github.com/opensfcc/sandbox-launchd/blob/develop/.github/CONTRIBUTING.md)
 
 About the Author
 ---
@@ -59,4 +50,4 @@ About the Author
 Disclaimer
 ---
 
-> The trademarks and product names of Salesforce®, including the mark Salesforce®, are the property of Salesforce.com. SFCC DevOps is not affiliated with Salesforce.com, nor does Salesforce.com sponsor or endorse the SFCC DevOps products or website. The use of the Salesforce® trademark on this project does not indicate an endorsement, recommendation, or business relationship between Salesforce.com and SFCC DevOps.
+> The trademarks and product names of Salesforce®, including the mark Salesforce®, are the property of Salesforce.com. OpenSFCC is not affiliated with Salesforce.com, nor does Salesforce.com sponsor or endorse the OpenSFCC products or website. The use of the Salesforce® trademark on this project does not indicate an endorsement, recommendation, or business relationship between Salesforce.com and OpenSFCC.
