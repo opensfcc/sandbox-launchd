@@ -8,13 +8,13 @@ if [ -d $HOME/.nvm ]; then
 fi
 
 # Set Variables
-LOGFILE=$HOME/.sfccdevops/sandbox.log
+LOGFILE=$HOME/.opensfcc/sandbox.log
 
 # Alias sandbox to sfcc-ci for custom handling
 sandbox() {
     # Check if SFCC_SANDBOX_ID is set
     if [ -z "$SFCC_SANDBOX_ID" ]; then
-        echo -e "\n❌ MISSING SFCC_SANDBOX_ID\n\n\033[0;2mPlease make sure you've added your environmental variables:\n\n› \033[0;36mhttps://github.com/sfccdevops/sandbox-launchd\n"
+        echo -e "\n❌ MISSING SFCC_SANDBOX_ID\n\n\033[0;2mPlease make sure you've added your environmental variables:\n\n› \033[0;36mhttps://github.com/opensfcc/sandbox-launchd\n"
         exit 1
 
     # Check if sfcc-ci is installed
@@ -23,7 +23,7 @@ sandbox() {
 
     # Exit if sfcc-ci is not installed
     else
-        echo -e "\n❌ MISSING SFCC-CI\n\n\033[0;2mPlease install & configure sfcc-ci:\n\n› \033[0;36mhttps://github.com/sfccdevops/sandbox-launchd\n"
+        echo -e "\n❌ MISSING SFCC-CI\n\n\033[0;2mPlease install & configure sfcc-ci:\n\n› \033[0;36mhttps://github.com/opensfcc/sandbox-launchd\n"
         exit 1
     fi
 }
