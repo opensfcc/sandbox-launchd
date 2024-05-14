@@ -3,14 +3,14 @@
 function shutdown()
 {
     # Send Shutdown Signal to Sandbox in Background
-    ~/.sfccdevops/sdx-stop
+    ~/.opensfcc/sdx-stop
     exit 0
 }
 
 function startup()
 {
     # Send Startup Signal to Sandbox in Background
-    ~/.sfccdevops/sdx-start
+    ~/.opensfcc/sdx-start
 
     tail -f /dev/null &
     wait $!
