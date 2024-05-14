@@ -5,27 +5,27 @@
 		<key>Debug</key>
 		<true/>
 		<key>Label</key>
-		<string>com.sfccdevops.sleepwatcher</string>
+		<string>com.opensfcc.sleepwatcher</string>
 		<key>ProgramArguments</key>
 		<array>
 			<string>/opt/homebrew/opt/sleepwatcher/sbin/sleepwatcher</string>
 			<string>--verbose</string>
 			<string>--sleep</string>
-			<string>~/.sfccdevops/sdx-stop</string>
+			<string>~/.opensfcc/sdx-stop</string>
 			<string>--wakeup</string>
-			<string>~/.sfccdevops/sdx-start</string>
+			<string>~/.opensfcc/sdx-start</string>
 			<string>--displaysleep</string>
-			<string>~/.sfccdevops/sdx-stop</string>
+			<string>~/.opensfcc/sdx-stop</string>
 			<string>--displaywakeup</string>
-			<string>~/.sfccdevops/sdx-start</string>
+			<string>~/.opensfcc/sdx-start</string>
 		</array>
 		<key>RunAtLoad</key>
 		<true/>
 		<key>KeepAlive</key>
 		<true/>
 		<key>StandardOutPath</key>
-		<string>~/.sfccdevops/sandbox.log</string>
+		<string>~/.opensfcc/sandbox.log</string>
 		<key>StandardErrorPath</key>
-		<string>~/.sfccdevops/sandbox.log</string>
+		<string>~/.opensfcc/sandbox.log</string>
 	</dict>
 </plist>
