@@ -1,4 +1,4 @@
-![Logo](https://sfccdevops.s3.amazonaws.com/logo-128.png "Logo")
+![Logo](https://avatars.githubusercontent.com/u/151680118?s=200&v=4 "Logo")
 
 **[↤ Getting Started](../README.md)**
 
@@ -28,12 +28,12 @@ Our [./install](../install) script does the following:
 2. Adds [sdx-start](../bin/sdx-start) bash script to start a Sandbox after the computer boots or wakes up
 3. Adds [sdx-stop](../bin/sdx-stop) bash script to stop a Sandbox when the computer shuts down or goes to sleep
 4. Adds [boot-shutdown](../bin/boot-shutdown) bash script to call above scripts on shutdown and boot
-5. Adds [com.sfccdevops.sleepwatcher.plist](../launchd/com.sfccdevops.sleepwatcher.plist) Launch Agent for Sleepwatcher events
-6. Adds [com.sfccdevops.sandbox.plist](../launchd/com.sfccdevops.sandbox.plist) Launch Agent for Boot and Shutdown events
+5. Adds [com.opensfcc.sleepwatcher.plist](../launchd/com.opensfcc.sleepwatcher.plist) Launch Agent for Sleepwatcher events
+6. Adds [com.opensfcc.sandbox.plist](../launchd/com.opensfcc.sandbox.plist) Launch Agent for Boot and Shutdown events
 
 ### Installation Prompts
 
-After running the installer, you will see a notice for a new `Background Items Added` entry for [boot-shutdown](../bin/boot-shutdown).  This was registered by the [com.sfccdevops.sandbox.plist](../launchd/com.sfccdevops.sandbox.plist) Launch Agent when we requested to be notified as the computer started or was about to shut down.
+After running the installer, you will see a notice for a new `Background Items Added` entry for [boot-shutdown](../bin/boot-shutdown).  This was registered by the [com.opensfcc.sandbox.plist](../launchd/com.opensfcc.sandbox.plist) Launch Agent when we requested to be notified as the computer started or was about to shut down.
 
 Clicking this notice will open the Login Items, where our [boot-shutdown](../bin/boot-shutdown) script is listed.
 
